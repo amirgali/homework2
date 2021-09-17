@@ -23,12 +23,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxI-5q-hW9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxI-5q-hW9">
                                 <rect key="frame" x="20" y="167" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="c8e-eM-Zxm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-fM-hqb">
@@ -40,6 +40,9 @@
                                 <state key="normal" title="Sing Up">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="singUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XtS-J3-DDK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhZ-c2-4Ie">
                                 <rect key="frame" x="20" y="221" width="374" height="21"/>
@@ -135,6 +138,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JqC-oy-KhA" secondAttribute="trailing" constant="20" id="zWU-CJ-hUq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthdayTF" destination="85X-Fz-f6i" id="6z0-yf-xFr"/>
+                        <outlet property="loginTF" destination="JqC-oy-KhA" id="Lbx-G9-xn3"/>
+                        <outlet property="nameTF" destination="oxI-5q-hW9" id="u2l-Nl-sbI"/>
+                        <outlet property="passwordTF" destination="pqy-Nk-dfD" id="xJj-vt-7xi"/>
+                        <outlet property="singUpButton" destination="hqA-fM-hqb" id="qPC-i4-xGv"/>
+                        <outlet property="surnameTF" destination="l83-um-XPH" id="TC0-mR-wfB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
