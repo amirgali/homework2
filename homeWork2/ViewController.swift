@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var singUpButton: UIButton!
     
+    var dateFormate = Bool()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,11 +33,20 @@ class ViewController: UIViewController {
         loginTF.layer.cornerRadius = 12
         passwordTF.layer.cornerRadius = 12
         singUpButton.layer.cornerRadius = 12
+        
+        nameTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        surnameTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        birthdayTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        loginTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        passwordTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        
+        birthdayTF.keyboardType = .decimalPad
     }
    
     @IBAction func singUp(_ sender: Any) {
         
         guard let name = nameTF.text, let surname = surnameTF.text, let birthday = birthdayTF.text, let login = loginTF.text, let password = passwordTF.text else { return }
+        
         let condition: Bool = !name.isEmpty && !surname.isEmpty && !birthday.isEmpty && !login.isEmpty && !password.isEmpty
         singUpButton.backgroundColor = condition ? .green : .red
     }
@@ -43,12 +54,8 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+   
     
-    func setView(_ view: ViewType, space: CGFloat) -> UIView {
-        let spaceView = UIView(frame: CGRect(x: 0, y: 0, width: space, height: 1))
-        setView(view, with: spaceView)
-        return spaceView
-    }
     
 }
 
