@@ -38,6 +38,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="IuA-cw-dTE"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sing Up">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
