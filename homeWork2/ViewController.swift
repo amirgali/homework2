@@ -49,13 +49,7 @@ class ViewController: UIViewController {
         print("\(dateString)")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        //        if let _: NSDate = (dateFormatter.date(from: dateString)! as NSDate?) {
-        //            print("date is valid")
-        //        } else {
-        //            print("date is invalid")
-        //
-        //        }
+ 
         guard let _ = dateFormatter.date(from: dateString) else {
             let alert = UIAlertController(title: "Wrong format", message: "Please enter your birthday in format dd.mm.yyyy", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -65,14 +59,7 @@ class ViewController: UIViewController {
             
             return present(alert, animated: true, completion: nil)
         }
-        
-        //        guard let _ = Double(birthdayTF.text!) else {
-        //            let alert = UIAlertController(title: "Wrong format", message: "Please enter your birthday", preferredStyle: .alert)
-        //            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        //            alert.addAction(okAction)
-        //            return present(alert, animated: true, completion: nil)
-        //        }
-        
+      
         let condition: Bool = !name.isEmpty && !surname.isEmpty && !birthday.isEmpty && !login.isEmpty && !password.isEmpty
         singUpButton.backgroundColor = condition ? .green : .red
         birthdayTF.backgroundColor = .white
@@ -81,8 +68,6 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
     
 }
 
